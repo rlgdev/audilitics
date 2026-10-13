@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "latest.schema.json",
+  "title": "Public dashboard/latest.json: the only file the Overview needs",
+  "type": "object",
+  "required": [
+    "run",
+    "kpis",
+    "models",
+    "hot_configs",
+    "hot_count",
+    "hot_window",
+    "changes",
+    "directory"
+  ],
+  "properties": {
+    "hot_configs": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "required": [
+          "config_key",
+          "label",
+          "slug",
+          "offers",
+          "priced",
+          "special_median",
+          "start_price",
+          "drop",
+          "drop_pct",
+          "score_best",
+          "hot_score",
+          "points"
+        ],
+        "properties": {
+          "priced": {
+            "type": "integer",
+            "minimum": 3
+          }
+        }
+      }
+    },
+    "directory": {
+      "type": "object",
+      "required": [
+        "segments",
+        "engine_groups",
+        "plans",
+        "promos",
+        "scoring",
+        "min_group"
+      ],
+      "not": {
+        "required": [
+          "dealers"
+        ]
+      }
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug",
+          "name",
+          "segment",
+          "status",
+          "offers",
+          "priced",
+          "special_min",
+          "spark",
+          "promos"
+        ]
+      }
+    }
+  }
+}

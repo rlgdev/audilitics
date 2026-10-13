@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "private-dealers.schema.json",
+  "title": "Private private/dealers.json",
+  "type": "object",
+  "required": [
+    "dates",
+    "dealers"
+  ],
+  "properties": {
+    "dealers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "nr",
+          "name",
+          "city",
+          "offers",
+          "discount_pct_median",
+          "models_now"
+        ],
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "phone"
+              ]
+            },
+            {
+              "required": [
+                "telefon"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

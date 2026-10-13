@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "changes.schema.json",
+  "title": "Public dashboard/changes/<date>.json (spec 6.2)",
+  "type": "object",
+  "required": [
+    "date",
+    "previous",
+    "configs_new",
+    "configs_gone",
+    "price_drops",
+    "price_rises",
+    "stock",
+    "promo_changes",
+    "summary",
+    "models_new",
+    "models_retired",
+    "models_returned"
+  ]
+}

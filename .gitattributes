@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.gz binary
+*.xlsx binary
+*.png binary
+*.woff binary
+*.woff2 binary
+data/raw/bundles/*.js binary

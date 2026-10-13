@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "offer.schema.json",
+  "title": "Offer (spec 5.2): one redacted, normalised item of one snapshot; no identity across runs",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "offer_id",
+    "model",
+    "engine",
+    "engine_group",
+    "code",
+    "model_year",
+    "production_year",
+    "dealer_nr",
+    "dealer",
+    "catalog",
+    "special",
+    "price_30d",
+    "catalog_30d",
+    "rate",
+    "rate_old",
+    "rate_30d",
+    "business_edition",
+    "stock_cleaning",
+    "moj_elektryk",
+    "promo_bits",
+    "package_type",
+    "footnote",
+    "plan_code",
+    "discount",
+    "discount_pct",
+    "config_key",
+    "version_key"
+  ],
+  "properties": {
+    "offer_id": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}/\\d+$"
+    },
+    "model": {
+      "type": "string"
+    },
+    "engine": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "engine_group": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_year": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "production_year": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dealer_nr": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dealer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "catalog": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "special": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "price_30d": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "catalog_30d": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "rate_old": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "rate_30d": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "discount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "discount_pct": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "business_edition": {
+      "type": "boolean"
+    },
+    "stock_cleaning": {
+      "type": "boolean"
+    },
+    "moj_elektryk": {
+      "type": "boolean"
+    },
+    "promo_bits": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2047
+    },
+    "package_type": {
+      "enum": [
+        "none",
+        "insuranceAndService",
+        "insuranceOrService",
+        "serviceOnly",
+        "insuranceOnly"
+      ]
+    },
+    "footnote": {
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "plan_code": {
+      "enum": [
+        "APL-1",
+        "APL-2",
+        "APL-2-EV",
+        "APL-3"
+      ]
+    },
+    "config_key": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "version_key": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "extra": {
+      "type": "object"
+    }
+  }
+}

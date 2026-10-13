@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "trends.schema.json",
+  "title": "Public dashboard/trends.json (spec 6.1)",
+  "type": "object",
+  "required": [
+    "dates",
+    "totals",
+    "segments",
+    "models"
+  ],
+  "properties": {
+    "dates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      }
+    },
+    "totals": {
+      "allOf": [
+        {
+          "type": "object",
+          "required": [
+            "offers",
+            "priced",
+            "special_min",
+            "special_median",
+            "special_max",
+            "discount_pct_median",
+            "rates",
+            "promo_counts"
+          ],
+          "properties": {
+            "offers": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "priced": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "special_min": {
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "special_median": {
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "special_max": {
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "discount_pct_median": {
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "rates": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object",
+                "required": [
+                  "priced",
+                  "rate_min",
+                  "rate_median"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "required": [
+            "net_added",
+            "net_removed",
+            "lfl_index",
+            "slider_counts",
+            "config_drops"
+          ]
+        }
+      ]
+    },
+    "segments": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "offers",
+          "priced",
+          "special_min",
+          "special_median",
+          "special_max",
+          "discount_pct_median",
+          "rates",
+          "promo_counts"
+        ],
+        "properties": {
+          "offers": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "priced": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "special_min": {
+            "type": "array",
+            "items": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "special_median": {
+            "type": "array",
+            "items": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "special_max": {
+            "type": "array",
+            "items": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "discount_pct_median": {
+            "type": "array",
+            "items": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "rates": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": [
+                "priced",
+                "rate_min",
+                "rate_median"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "models": {
+      "type": "object",
+      "additionalProperties": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "offers",
+              "priced",
+              "special_min",
+              "special_median",
+              "special_max",
+              "discount_pct_median",
+              "rates",
+              "promo_counts"
+            ],
+            "properties": {
+              "offers": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "priced": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "special_min": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "special_median": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "special_max": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "discount_pct_median": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "rates": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "required": [
+                    "priced",
+                    "rate_min",
+                    "rate_median"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "required": [
+              "net_added",
+              "net_removed",
+              "lfl_index",
+              "lowest_version_special",
+              "slider_counts"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

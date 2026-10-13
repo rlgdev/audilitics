@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "snapshot-index.schema.json",
+  "title": "snapshots/index.json: private (full entries) or public (ok: counts; suspect: date and status only)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "date",
+      "status"
+    ],
+    "properties": {
+      "date": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
+      "status": {
+        "enum": [
+          "ok",
+          "suspect",
+          "failed"
+        ]
+      },
+      "offers": {
+        "type": "integer"
+      },
+      "models": {
+        "type": "integer"
+      },
+      "configurations": {
+        "type": "integer"
+      },
+      "rules_version": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "bundle_hash": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

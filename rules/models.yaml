@@ -1,0 +1,11 @@
+# Overrides only (spec 4.5, 4.6). The model list itself is discovered from the feed on every run.
+# Keys are the model name exactly as the feed sends it.
+# Allowed fields: slug, segment (A | Q | S/RS | e-tron), order (number), status (active | retired),
+#                 merge_into (name of the model whose history this one continues, after a site rename).
+#
+# Example:
+#   Audi Q6 Sportback e-tron:
+#     segment: e-tron
+#     order: 405
+
+overrides: {}

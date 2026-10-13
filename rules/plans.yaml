@@ -1,0 +1,44 @@
+# Footnote -> Audi Perfect Lease plan mapping (spec 3.4 footnote rule, spec 6.4).
+# Footnote selection transcribed from rateAnnotationNumber in the site bundle.
+
+rule_sets:
+  - version: v1
+    valid_from: 2026-10-13
+
+    plans:
+      APL-1: {footnote: 1, fee_pct: 0.10, term_months: 36, mileage_km: 15000}
+      APL-2: {footnote: 2, fee_pct: 0.10, term_months: 24, mileage_km: 15000}
+      APL-2-EV: {footnote: 2, fee_pct: 0.08, term_months: 24, mileage_km: 15000}
+      APL-3: {footnote: 3, fee_pct: 0.10, term_months: 24, mileage_km: 15000}
+
+    footnote_rules:
+      # Checked in order; first match wins; no match = footnote 1.
+      - footnote: 2
+        any:
+          - {model_contains: "e-tron"}
+      - footnote: 3
+        any:
+          - {model_contains: "Q5", code_prefixes: ["GU"]}
+          - {model_contains: "Q7", code_prefixes: ["4MQ"]}
+          - {model_contains: "A3 Limousine", code_prefixes: ["8YM"]}
+          - {model_contains: "A3 Sportback", code_prefixes: ["8YF"]}
+          - {model_contains: "A3 allstreet", code_prefixes: ["8YJ"]}
+          - {model_contains: "S3 Limousine", code_prefixes: ["8YM"]}
+          - {model_contains: "S3 Sportback", code_prefixes: ["8YF"]}
+          - {code_prefixes: ["4MT", "FJ", "FU", "FN", "4N"]}
+
+    # Footnote 2 exception ("Wyjątek"): electric models of model year 2026 and
+    # the Audi A6 e-tron / Q6 e-tron ranges use APL-2-EV.
+    footnote_2_exception:
+      plan: APL-2-EV
+      any:
+        - {model_year: "2026"}
+        - {code_prefixes: ["GH", "GF"]}
+
+    # Leasing 101% is a flag, not a rate (spec 6.4).
+    leasing_101: {fee_pct: 0.25, term_months: 24, residual_pct: 0.20}
+
+    footnote_texts:
+      1: "Podana rata miesięczna stanowi orientacyjną wysokość netto raty miesięcznej Audi Perfect Lease. Parametry przyjęte do kalkulacji raty: opłata wstępna 10% (liczona od ceny katalogowej), okres leasingu 36 miesięcy, roczny przebieg 15 000 km, finalna rata określona w umowie. Oferta dla przedsiębiorców."
+      2: "Parametry przyjęte do kalkulacji raty: opłata wstępna 10% (liczona od ceny katalogowej), okres leasingu 24 miesiące, roczny przebieg 15 000 km, finalna rata określona w umowie. Wyjątek: dla modeli elektrycznych roku modelowego 2026 oraz modeli z gamy Audi A6 e-tron i Audi Q6 e-tron przyjęto opłatę wstępną 8%."
+      3: "Parametry przyjęte do kalkulacji raty: opłata wstępna 10% (liczona od ceny katalogowej), okres leasingu 24 miesiące, roczny przebieg 15 000 km, finalna rata określona w umowie. Dotyczy wszystkich modeli z gamy Audi A5, Audi A6, Audi A8, Audi Q3, Audi Q5, Audi Q7, Audi Q8 oraz wybranych modeli z gamy A3."

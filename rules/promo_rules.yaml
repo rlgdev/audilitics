@@ -1,0 +1,174 @@
+# Promo sliders and card badges of gotowedoodbioru.audi.pl (spec 3.4).
+# Transcribed by hand from the site bundle; never parsed automatically (spec 3.6).
+# A snapshot is processed with the newest rule set whose valid_from <= snapshot date (spec 4.5).
+
+rule_sets:
+  - version: v1
+    valid_from: 2026-10-13
+    source_bundle: main.20ab651335fb4daeebc8.js
+
+    # Promo keys are used in URLs (?promo=bo,pu) and in data files.
+    # `badge_bit` is the bit position of the card badge in promo_bits (spec 5.2). Slider bits are no longer set
+    # on offers in release 1.1: slider responses are kept only as item counts per model (spec 3.4, 3.5).
+    promos:
+      bo:
+        name: Najlepsza oferta z rocznika 2026
+        badge_bit: 5
+        color_slot: 1
+      fe:
+        name: Audi Q7 Final Edition
+        badge_bit: 10
+        color_slot: 2
+      l101:
+        name: Leasing 101%
+        badge_bit: 7
+        color_slot: 3
+      pu:
+        name: Pakiet ubezpieczeń za 1 zł
+        badge_bit: 8
+        color_slot: 4
+      be:
+        name: Oferta Business Edition
+        badge_bit: 9
+        color_slot: 5
+      p15:
+        name: Dodatkowe 15 000 zł korzyści
+        badge_bit: 6
+        color_slot: 7
+
+    # One get2.php request per slider, each with c=20000; only the number of items per model is kept (spec 3.5).
+    sliders:
+      bo:
+        params: {bo: "Tak"}
+      fe:
+        params:
+          "m[]": ["Audi Q7", "Audi Q7 TFSI e", "Audi SQ7"]
+          "mc[]": "4MQ*"
+          rm: "2026"
+      l101:
+        params: {l101badge: "Tak"}
+      pu:
+        params: {pu: "Tak"}
+      be:
+        params: {b: "Tak"}
+      pks:
+        params: {pks: "Tak"}
+
+    badges:
+      # isBestOffer: not excluded, and (stock_cleaning or code in include list)
+      bo:
+        exclude_code_prefixes: ["8YFRWY", "8YMRWY", "8YV", "8YY", "8YW"]
+        include_code_prefixes: ["8YF", "8YM", "8YJ", "4MQ"]
+        include_stock_cleaning: true
+      # finalEditionModels (+ production year 2026 per the slider's rm=2026)
+      fe:
+        models: ["Audi Q7", "Audi Q7 TFSI e", "Audi SQ7"]
+        code_prefixes: ["4MQ"]
+        production_year: "2026"
+      # leasing101BadgeModels2025 / leasing101BadgeModels2026
+      l101:
+        models_by_production_year:
+          "2025":
+            - Audi Q5
+            - Audi Q5 e-hybrid
+            - Audi SQ5
+            - Audi Q5 Sportback
+            - Audi Q5 Sportback e-hybrid
+            - Audi SQ5 Sportback
+          "2026":
+            - Audi A3 Sportback
+            - Audi A3 Sportback TFSI e
+            - Audi A3 Limousine
+            - Audi A3 allstreet
+            - Audi S3 Sportback
+            - Audi S3 Limousine
+            - Audi RS 3 Sportback
+            - Audi RS 3 Limousine
+            - Audi A5 Limousine
+            - Audi A5 Limousine e-hybrid
+            - Audi A5 Avant
+            - Audi A5 Avant e-hybrid
+            - Audi S5 Limousine
+            - Audi S5 Avant
+            - Audi A6 Limousine
+            - Audi A6 Limousine e-hybrid
+            - Audi A6 Avant
+            - Audi A6 Avant e-hybrid
+            - Audi A6 Sportback e-tron
+            - Audi S6 Sportback e-tron
+            - Audi A6 Avant e-tron
+            - Audi S6 Avant e-tron
+            - Audi A8
+            - Audi A8 TFSI e
+            - Audi Q2
+            - Audi Q3
+            - Audi Q3 e-hybrid
+            - Audi Q3 Sportback
+            - Audi Q3 Sportback e-hybrid
+            - Audi Q4 e-tron
+            - Audi Q4 Sportback e-tron
+            - Audi Q5
+            - Audi Q5 e-hybrid
+            - Audi Q5 Sportback
+            - Audi Q5 Sportback e-hybrid
+            - Audi SQ5
+            - Audi SQ5 Sportback
+            - Audi Q6 e-tron
+            - Audi SQ6 e-tron
+            - Audi Q6 Sportback e-tron
+            - Audi SQ6 Sportback e-tron
+            - Audi Q7
+            - Audi Q7 TFSI e
+            - Audi SQ7
+            - Audi Q8
+            - Audi Q8 e-hybrid
+            - Audi Q8 TFSI e
+            - Audi SQ8
+            - Audi RS Q8
+            - Audi e-tron GT quattro
+            - Audi S e-tron GT
+            - Audi RS e-tron GT
+            - Audi RS e-tron GT performance
+      # offerPackageType != none. Checked in this order; the first match wins.
+      pu:
+        package_rules:
+          - type: insuranceAndService
+            models: [Audi Q5, Audi Q5 e-hybrid, Audi Q5 Sportback, Audi Q5 Sportback e-hybrid, Audi SQ5, Audi SQ5 Sportback]
+            production_year: "2025"
+          - type: insuranceOrService
+            models: [Audi Q5, Audi Q5 e-hybrid, Audi Q5 Sportback, Audi Q5 Sportback e-hybrid, Audi SQ5, Audi SQ5 Sportback]
+            production_year: "2026"
+            stock_cleaning: true
+          - type: insuranceOrService
+            models: [Audi A6 Limousine, Audi A6 Limousine e-hybrid, Audi A6 Avant, Audi A6 Avant e-hybrid]
+            code_prefixes: ["FN2", "FN5"]
+            production_year: "2026"
+          - type: insuranceOnly
+            models: [Audi Q7, Audi Q7 TFSI e, Audi SQ7]
+            code_prefixes: ["4MQ"]
+            production_year: "2026"
+      # business_edition=Tak; the Final Edition badge replaces it on the card
+      be:
+        business_edition: true
+        suppressed_by: fe
+      # additional15000BenefitModels (+ production year 2026, spec 3.4)
+      p15:
+        production_year: "2026"
+        model_code_prefixes:
+          Audi A6 Sportback e-tron: GH
+          Audi S6 Sportback e-tron: GH
+          Audi A6 Avant e-tron: GH
+          Audi S6 Avant e-tron: GH
+          Audi Q6 e-tron: GF
+          Audi SQ6 e-tron: GF
+          Audi Q6 Sportback e-tron: GF
+          Audi SQ6 Sportback e-tron: GF
+
+    # Footnote text shown next to promo chips (site wording, shortened only by cutting sentences).
+    footnotes:
+      l101: "Oferta leasingu 101% Volkswagen Financial Services Polska Sp. z o.o. dla przedsiębiorców na wybrane modele marki Audi. Suma opłat skalkulowana w oparciu o parametry: opłata wstępna 25%, okres leasingu 24 miesiące, wartość końcowa 20%."
+      pu: "Pakiet ubezpieczeń OC/AC/NNW na pierwszy rok użytkowania w cenie 1 zł oferowany przez Volkswagen Serwis Ubezpieczeniowy Sp. z o.o. na wybrane nowe samochody Audi będące przedmiotem Audi Classic Leasing, Audi Classic Leasing Promo lub Audi Perfect Lease."
+      p15: "Dla modeli z gamy Audi A6 e-tron oraz Audi Q6 e-tron dostępna jest dodatkowa korzyść gwarantowana w wysokości 15 000 zł, przeznaczona na obniżenie ceny katalogowej. Oferta dla przedsiębiorców."
+      bo: "Najlepsza oferta z rocznika 2026: oznaczenie nadawane przez serwis wybranym samochodom z wyprzedaży rocznika."
+      fe: "Audi Q7 Final Edition: Q7, Q7 TFSI e i SQ7 z kodem modelowym 4MQ, rok produkcji 2026."
+      be: "Oferta Business Edition: samochody oznaczone w serwisie jako Business Edition."

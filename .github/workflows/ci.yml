@@ -1,0 +1,72 @@
+# Guards pull requests and main of the public repository (spec 10.1, 12.2). Runs on synthetic data only and needs
+# no access to the private repository.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  collector:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: collector/pyproject.toml
+      - run: python -m pip install -e "collector[dev]"
+      - name: LibreOffice for the workbook recalculation test
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-calc
+      - run: ruff check .
+        working-directory: collector
+      - run: mypy collector
+        working-directory: collector
+      - run: PYTHONPATH=. pytest -q
+        working-directory: collector
+      - name: Publication guard on data/
+        run: python -m collector guard data
+        env:
+          PYTHONPATH: collector
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: python -m pip install -e collector
+      - run: npm ci
+        working-directory: web
+      - run: npx tsc --noEmit
+        working-directory: web
+      - run: npx eslint src e2e
+        working-directory: web
+      - run: npx vitest run
+        working-directory: web
+      - name: Palette validator (light and dark)
+        run: node tools/check_tokens.js
+        working-directory: web
+      - name: Synthetic dataset for e2e
+        run: PYTHONPATH=collector python -m collector --data-dir web/e2e/.data collect --fixture synthetic
+      - run: npx playwright install --with-deps chromium
+        working-directory: web
+      - name: Playwright smoke and screenshots (public and private builds, synthetic data)
+        run: npx playwright test
+        working-directory: web
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots
+          path: web/e2e/screenshots/

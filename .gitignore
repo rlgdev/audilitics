@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.run/
+.run-e2e.log
+node_modules/
+web/dist/
+web/e2e/.data/
+web/test-results/
+web/playwright-report/
+.claude/settings.local.json
+dist-e2e-public/
+dist-e2e-private/
+build/

@@ -1,0 +1,35 @@
+{
+  "runs": [
+    {
+      "date": "2026-09-15",
+      "status": "ok",
+      "offers": 115,
+      "models": 6,
+      "configurations": 12,
+      "public_configurations": 11
+    },
+    {
+      "date": "2026-09-29",
+      "status": "ok",
+      "offers": 113,
+      "models": 6,
+      "configurations": 12,
+      "public_configurations": 10
+    },
+    {
+      "date": "2026-10-13",
+      "status": "ok",
+      "offers": 116,
+      "models": 6,
+      "configurations": 12,
+      "public_configurations": 11
+    }
+  ],
+  "hot_count": 7,
+  "changes_latest": {
+    "configs_new": 2,
+    "configs_gone": 1,
+    "price_drops": 6,
+    "price_rises": 2
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "model.schema.json",
+  "title": "Public models/<slug>.json",
+  "type": "object",
+  "required": [
+    "model",
+    "dates",
+    "timeline",
+    "engines",
+    "configurations"
+  ],
+  "properties": {
+    "configurations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "config_key",
+          "label",
+          "current",
+          "history"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "deals.schema.json",
+  "title": "Public dashboard/deals.json (spec 6.3)",
+  "type": "object",
+  "required": [
+    "date",
+    "hot_window",
+    "configs",
+    "rankings"
+  ],
+  "properties": {
+    "configs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "config_key",
+          "label",
+          "model",
+          "slug",
+          "segment",
+          "engine",
+          "code",
+          "model_year",
+          "plan_code",
+          "offers",
+          "priced",
+          "special_min",
+          "special_median",
+          "score_best",
+          "score_median",
+          "components",
+          "promo_counts",
+          "flags",
+          "hot",
+          "hot_score"
+        ],
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "offer_id"
+              ]
+            },
+            {
+              "required": [
+                "dealer"
+              ]
+            },
+            {
+              "required": [
+                "dealer_nr"
+              ]
+            },
+            {
+              "required": [
+                "vin"
+              ]
+            },
+            {
+              "required": [
+                "link"
+              ]
+            }
+          ]
+        },
+        "properties": {
+          "priced": {
+            "type": "integer",
+            "minimum": 3
+          },
+          "offers": {
+            "type": "integer",
+            "minimum": 3
+          },
+          "config_key": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{16}$"
+          }
+        }
+      }
+    }
+  }
+}

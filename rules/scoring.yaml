@@ -1,0 +1,26 @@
+# Deal score and hot-deal thresholds (spec 6.3, 6.5).
+
+rule_sets:
+  - version: v1
+    valid_from: 2026-10-13
+
+    weights: {D: 0.35, P: 0.25, M: 0.20, R: 0.10}
+    momentum_cap_pct: 0.05      # a 5 % fall of the configuration median or more scores M = 100
+    momentum_new_car: 50        # M when the configuration is new or had fewer than 3 priced offers before
+    promo_bonus:
+      pu: 4                     # Pakiet ubezpieczeń za 1 zł badge
+      fe_or_p15: 4              # Final Edition or +15 000 zł badge
+      bo: 2                     # best-offer badge
+
+    rankings:
+      top_overall: 50
+      top_per_model: 3
+      top_per_segment: 10
+
+    hot_window_days: 31
+    hot_drop_pct: 0.03
+    hot_drop_pln: 5000
+    hot_new_score: 80
+    hot_bonus_per_pct: 4        # hot score = score + 4 x drop % (in percent points)
+    hot_bonus_cap: 20
+    hot_latest_limit: 24

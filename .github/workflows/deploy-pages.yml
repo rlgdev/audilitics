@@ -1,0 +1,61 @@
+# Publishes the public dashboard whenever main changes web/ or data/ (spec 10.1, 10.2). Pushes of data/ come from
+# the collector job of the private repository with a fine-grained token, which triggers this workflow.
+name: deploy-pages
+
+on:
+  push:
+    branches: [main]
+    paths: ['web/**', 'data/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Publication guard on data/ (spec 10.5)
+        run: |
+          python -m pip install -q -e collector
+          PYTHONPATH=collector python -m collector guard data
+      - run: npm ci
+        working-directory: web
+      - name: Build the public edition
+        working-directory: web
+        env:
+          VITE_EDITION: public
+          # Site base and router basename come from this one variable; set it to / for a custom domain.
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: npx vite build
+      - name: Copy the public data tree
+        run: |
+          mkdir -p web/dist/data
+          if [ -d data ]; then cp -r data/. web/dist/data/; fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

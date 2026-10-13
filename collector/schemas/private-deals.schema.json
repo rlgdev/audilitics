@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "private-deals.schema.json",
+  "title": "Private private/deals.json: scored offers (no VIN or link column)",
+  "type": "object",
+  "required": [
+    "date",
+    "columns",
+    "rows",
+    "rankings"
+  ],
+  "properties": {
+    "columns": {
+      "type": "array",
+      "contains": {
+        "const": "offer_id"
+      },
+      "items": {
+        "type": "string",
+        "not": {
+          "enum": [
+            "vin",
+            "link",
+            "komisja",
+            "telefon",
+            "phone"
+          ]
+        }
+      }
+    }
+  }
+}
