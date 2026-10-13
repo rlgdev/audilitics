@@ -1,0 +1,734 @@
+[
+  {
+    "name": "Audi A3 Limousine",
+    "slug": "a3-limousine",
+    "segment": "A",
+    "order": 1,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TFSI"
+    ]
+  },
+  {
+    "name": "Audi A3 Sportback",
+    "slug": "a3-sportback",
+    "segment": "A",
+    "order": 2,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "(none)",
+      "TDI",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi A3 Sportback TFSI e",
+    "slug": "a3-sportback-tfsi-e",
+    "segment": "A",
+    "order": 3,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TFSI e"
+    ]
+  },
+  {
+    "name": "Audi A3 Sportback e-hybrid",
+    "slug": "a3-sportback-e-hybrid",
+    "segment": "A",
+    "order": 4,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid"
+    ]
+  },
+  {
+    "name": "Audi A3 allstreet",
+    "slug": "a3-allstreet",
+    "segment": "A",
+    "order": 5,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi A3 allstreet e-hybrid",
+    "slug": "a3-allstreet-e-hybrid",
+    "segment": "A",
+    "order": 6,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid"
+    ]
+  },
+  {
+    "name": "Audi A5 Avant",
+    "slug": "a5-avant",
+    "segment": "A",
+    "order": 7,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI",
+      "TDI quattro",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi A5 Avant e-hybrid",
+    "slug": "a5-avant-e-hybrid",
+    "segment": "A",
+    "order": 8,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid quattro"
+    ]
+  },
+  {
+    "name": "Audi A5 Limousine",
+    "slug": "a5-limousine",
+    "segment": "A",
+    "order": 9,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI",
+      "TDI quattro",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi A5 Limousine e-hybrid",
+    "slug": "a5-limousine-e-hybrid",
+    "segment": "A",
+    "order": 10,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid quattro"
+    ]
+  },
+  {
+    "name": "Audi A6 Avant",
+    "slug": "a6-avant",
+    "segment": "A",
+    "order": 11,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI",
+      "TDI quattro",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi A6 Avant e-hybrid",
+    "slug": "a6-avant-e-hybrid",
+    "segment": "A",
+    "order": 12,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid quattro"
+    ]
+  },
+  {
+    "name": "Audi A6 Avant e-tron",
+    "slug": "a6-avant-e-tron",
+    "segment": "e-tron",
+    "order": 13,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-tron",
+      "e-tron quattro"
+    ]
+  },
+  {
+    "name": "Audi A6 Limousine",
+    "slug": "a6-limousine",
+    "segment": "A",
+    "order": 14,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI",
+      "TDI quattro",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi A6 Limousine e-hybrid",
+    "slug": "a6-limousine-e-hybrid",
+    "segment": "A",
+    "order": 15,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid quattro"
+    ]
+  },
+  {
+    "name": "Audi A6 Sportback e-tron",
+    "slug": "a6-sportback-e-tron",
+    "segment": "e-tron",
+    "order": 16,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-tron"
+    ]
+  },
+  {
+    "name": "Audi A6 allroad",
+    "slug": "a6-allroad",
+    "segment": "A",
+    "order": 17,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI quattro"
+    ]
+  },
+  {
+    "name": "Audi A6 allroad e-hybrid",
+    "slug": "a6-allroad-e-hybrid",
+    "segment": "A",
+    "order": 18,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid quattro"
+    ]
+  },
+  {
+    "name": "Audi A8",
+    "slug": "a8",
+    "segment": "A",
+    "order": 19,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "50 TDI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q3",
+    "slug": "q3",
+    "segment": "Q",
+    "order": 20,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q3 Sportback",
+    "slug": "q3-sportback",
+    "segment": "Q",
+    "order": 21,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q3 Sportback e-hybrid",
+    "slug": "q3-sportback-e-hybrid",
+    "segment": "Q",
+    "order": 22,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid"
+    ]
+  },
+  {
+    "name": "Audi Q3 e-hybrid",
+    "slug": "q3-e-hybrid",
+    "segment": "Q",
+    "order": 23,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid"
+    ]
+  },
+  {
+    "name": "Audi Q4 Sportback e-tron",
+    "slug": "q4-sportback-e-tron",
+    "segment": "e-tron",
+    "order": 24,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-tron",
+      "e-tron quattro"
+    ]
+  },
+  {
+    "name": "Audi Q4 e-tron",
+    "slug": "q4-e-tron",
+    "segment": "e-tron",
+    "order": 25,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-tron",
+      "e-tron quattro"
+    ]
+  },
+  {
+    "name": "Audi Q5",
+    "slug": "q5",
+    "segment": "Q",
+    "order": 26,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI quattro",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q5 Sportback",
+    "slug": "q5-sportback",
+    "segment": "Q",
+    "order": 27,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI quattro",
+      "TFSI",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q5 Sportback e-hybrid",
+    "slug": "q5-sportback-e-hybrid",
+    "segment": "Q",
+    "order": 28,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid quattro"
+    ]
+  },
+  {
+    "name": "Audi Q5 e-hybrid",
+    "slug": "q5-e-hybrid",
+    "segment": "Q",
+    "order": 29,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-hybrid quattro"
+    ]
+  },
+  {
+    "name": "Audi Q6 Sportback e-tron",
+    "slug": "q6-sportback-e-tron",
+    "segment": "e-tron",
+    "order": 30,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-tron"
+    ]
+  },
+  {
+    "name": "Audi Q6 e-tron",
+    "slug": "q6-e-tron",
+    "segment": "e-tron",
+    "order": 31,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-tron",
+      "e-tron quattro"
+    ]
+  },
+  {
+    "name": "Audi Q7",
+    "slug": "q7",
+    "segment": "Q",
+    "order": 32,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI quattro",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q7 TFSI e",
+    "slug": "q7-tfsi-e",
+    "segment": "Q",
+    "order": 33,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q8",
+    "slug": "q8",
+    "segment": "Q",
+    "order": 34,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI quattro",
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q8 TFSI e",
+    "slug": "q8-tfsi-e",
+    "segment": "Q",
+    "order": 35,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi Q8 e-hybrid",
+    "slug": "q8-e-hybrid",
+    "segment": "Q",
+    "order": 36,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "TFSI quattro"
+    ]
+  },
+  {
+    "name": "Audi RS 3 Limousine",
+    "slug": "rs-3-limousine",
+    "segment": "S/RS",
+    "order": 37,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele RS"
+    ]
+  },
+  {
+    "name": "Audi RS 3 Sportback",
+    "slug": "rs-3-sportback",
+    "segment": "S/RS",
+    "order": 38,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele RS"
+    ]
+  },
+  {
+    "name": "Audi RS 5 Avant",
+    "slug": "rs-5-avant",
+    "segment": "S/RS",
+    "order": 39,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele RS"
+    ]
+  },
+  {
+    "name": "Audi RS 5 Limousine",
+    "slug": "rs-5-limousine",
+    "segment": "S/RS",
+    "order": 40,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele RS"
+    ]
+  },
+  {
+    "name": "Audi RS Q8",
+    "slug": "rs-q8",
+    "segment": "S/RS",
+    "order": 41,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele RS"
+    ]
+  },
+  {
+    "name": "Audi RS e-tron GT",
+    "slug": "rs-e-tron-gt",
+    "segment": "S/RS",
+    "order": 42,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele RS"
+    ]
+  },
+  {
+    "name": "Audi RS e-tron GT performance",
+    "slug": "rs-e-tron-gt-performance",
+    "segment": "S/RS",
+    "order": 43,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele RS"
+    ]
+  },
+  {
+    "name": "Audi S e-tron GT",
+    "slug": "s-e-tron-gt",
+    "segment": "e-tron",
+    "order": 44,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi S3 Limousine",
+    "slug": "s3-limousine",
+    "segment": "S/RS",
+    "order": 45,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi S3 Sportback",
+    "slug": "s3-sportback",
+    "segment": "S/RS",
+    "order": 46,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi S5 Avant",
+    "slug": "s5-avant",
+    "segment": "S/RS",
+    "order": 47,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi S5 Limousine",
+    "slug": "s5-limousine",
+    "segment": "S/RS",
+    "order": 48,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi S6 Sportback e-tron",
+    "slug": "s6-sportback-e-tron",
+    "segment": "S/RS",
+    "order": 49,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi SQ5",
+    "slug": "sq5",
+    "segment": "S/RS",
+    "order": 50,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi SQ5 Sportback",
+    "slug": "sq5-sportback",
+    "segment": "S/RS",
+    "order": 51,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi SQ6 e-tron",
+    "slug": "sq6-e-tron",
+    "segment": "S/RS",
+    "order": 52,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi SQ8",
+    "slug": "sq8",
+    "segment": "S/RS",
+    "order": 53,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "modele S"
+    ]
+  },
+  {
+    "name": "Audi e-tron GT quattro",
+    "slug": "e-tron-gt-quattro",
+    "segment": "e-tron",
+    "order": 54,
+    "status": "active",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "retired_on": null,
+    "engine_groups": [
+      "e-tron GT quattro"
+    ]
+  }
+]

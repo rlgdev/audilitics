@@ -1,0 +1,11 @@
+[
+  {
+    "date": "2026-10-13",
+    "status": "ok",
+    "offers": 4908,
+    "models": 54,
+    "configurations": 194,
+    "rules_version": "promo:v1/plans:v1/scoring:v1",
+    "bundle_hash": "20ab651335fb4daeebc8"
+  }
+]
