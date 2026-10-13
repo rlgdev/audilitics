@@ -4,7 +4,7 @@ version = "1.1.0"
 description = "Collector for the Audi 'gotowe do odbioru' stock feed (Audilitics)"
 requires-python = ">=3.12"
 dependencies = [
-  "requests==2.32.3",
+  "requests==2.34.2",
   "pydantic==2.10.6",
   "PyYAML==6.0.2",
   "openpyxl==3.1.5",
