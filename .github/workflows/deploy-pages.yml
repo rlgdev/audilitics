@@ -47,7 +47,7 @@ jobs:
         run: |
           mkdir -p web/dist/data
           if [ -d data ]; then cp -r data/. web/dist/data/; fi
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: web/dist
   deploy:
