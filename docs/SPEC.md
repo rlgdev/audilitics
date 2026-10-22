@@ -1,17 +1,17 @@
-> Exported from the Claude Doc "Audilitics — Specification" (doc rev 65, 2026-10-13; spec rev 38, public trends edition). Source of truth for scope.
+> Exported from the Claude Doc "Audilitics — Specification" (doc rev 65, 2026-10-13; spec rev 38, public trends edition), with rev 39 (2026-10-22, weekly cadence) applied to this export. Source of truth for scope.
 
 # Audilitics — Specification
 
-2026-10-13 · @Roman · rev 38
+2026-10-22 · @Roman · rev 39
 
-Audilitics is a public GitHub Pages dashboard of price trends in the Audi “gotowe do odbioru” stock, fed every two weeks by an automated collector. The public site shows aggregates only: trends, model statistics and deal scores per configuration. Offer-level tables stay in a private repository and are viewed locally. No VIN, dealer stock number, offer link or phone number is collected, and nothing links to individual offers. This document is the hand-off for implementation; no code is included. Release 1.0 is already built; section 16 lists what changes for release 1.1.
+Audilitics is a public GitHub Pages dashboard of price trends in the Audi “gotowe do odbioru” stock, fed every week by an automated collector. The public site shows aggregates only: trends, model statistics and deal scores per configuration. Offer-level tables stay in a private repository and are viewed locally. No VIN, dealer stock number, offer link or phone number is collected, and nothing links to individual offers. This document is the hand-off for implementation; no code is included. Release 1.0 is already built; section 16 lists what changes for release 1.1.
 
 ## 1. At a glance
 
-Release 1.1, the public trends edition, answers three questions for every Audi model in the “gotowe do odbioru” stock, from aggregates only: what is in stock now, how prices and lease rates moved every two weeks, and which configurations are the best deals today.
+Release 1.1, the public trends edition, answers three questions for every Audi model in the “gotowe do odbioru” stock, from aggregates only: what is in stock now, how prices and lease rates moved every week, and which configurations are the best deals today.
 
 ```text
-audi.pl JSON feed -> collector (private repo, GitHub Actions, every 14 days, rules/*.yaml)
+audi.pl JSON feed -> collector (private repo, GitHub Actions, every week, rules/*.yaml)
   -> redacted offers in the private repo (data/)         -> private dashboard (local build, never deployed)
   -> aggregates pushed to the public repo (data/)        -> public dashboard (GitHub Pages)
 ```
@@ -21,7 +21,7 @@ The collector is the only moving part: it reads the feed, drops the identifying 
 | Part | Decision |
 |---|---|
 | Repositories | Public `rlgdev/audilitics`: code, rules, docs, aggregate data and the GitHub Pages site. Private `rlgdev/audilitics-private`: the scheduled collector job, redacted offers, exports, run reports |
-| Collector | Python 3.12 package (code in the public repository) run every 14 days by a scheduled GitHub Actions job in the private repository; reads the site’s own JSON feed, no browser automation |
+| Collector | Python 3.12 package (code in the public repository) run every week by a scheduled GitHub Actions job in the private repository; reads the site’s own JSON feed, no browser automation |
 | Data minimisation | `vin`, `komisja`, `link`, `kod_audi` and `telefon` are dropped right after schema validation and never written anywhere, not even as hashes (3.5); a single car is never followed across runs |
 | Unit of publication | The configuration: model + engine + model code + model year. Every public figure rests on at least 3 priced offers (minimum group size, 5.5) |
 | Storage | Git itself: plain JSON for what the dashboards read, gzipped JSON for archives; no database, no server |
@@ -39,7 +39,7 @@ Sections 2–6 define the data side, 7–8 the dashboards, 9–12 delivery, 13�
 
 ## 2. Scope
 
-Release 1.1 covers the full new-car stock on gotowedoodbioru.audi.pl, collected every 14 days and published as trends, model statistics and configuration-level deal scores; offer-level data stays private; nothing requires a server.
+Release 1.1 covers the full new-car stock on gotowedoodbioru.audi.pl, collected every week and published as trends, model statistics and configuration-level deal scores; offer-level data stays private; nothing requires a server.
 
 In scope (release 1.1)
 
@@ -67,7 +67,7 @@ Out of scope (release 1.1)
 |---|---|
 | Static hosting only (GitHub Pages) | All computation happens in the Action; the browser reads prepared JSON |
 | Unofficial data source; §8.2–8.3 of the audi.pl Regulamin restrict reproducing and publishing the site’s information | Only aggregates are published; identifiers and links are never collected; rules are versioned; the bundle hash is watched for changes (11, Legal) |
-| One run per 14 days | Trends are fortnightly points; the Changes view compares consecutive runs |
+| One run per week | Trends are weekly points; the Changes view compares consecutive runs |
 | Request budget | At most 10 HTTP requests per run, identified User-Agent, no image or bundle downloads |
 | Reproducibility | A run can be replayed from the redacted `data/raw/<date>.json.gz` in the private repository to rebuild every derived file, public and private |
 | Site content is Polish | Promo names, engine strings and footnotes are stored verbatim; UI labels are English with Polish terms kept where they name a site feature |
@@ -178,12 +178,12 @@ Sources: gotowedoodbioru.audi.pl, bundle `main.20ab651335fb4daeebc8.js` (760 kB,
 
 ## 4. Collector
 
-A Python package (`collector/`, in the public repository) that one GitHub Actions job in the private repository runs every 14 days; a run makes at most 10 HTTP requests, writes one redacted snapshot and the private derived files into the private repository, and pushes the aggregate files to the public repository.
+A Python package (`collector/`, in the public repository) that one GitHub Actions job in the private repository runs every week; a run makes at most 10 HTTP requests, writes one redacted snapshot and the private derived files into the private repository, and pushes the aggregate files to the public repository.
 
 ### 4.1 Schedule
 
-- Workflow `collect.yml` in the private repository: cron every Monday 05:17 UTC plus `workflow_dispatch` with inputs `force` (ignore the 13-day guard) and `date` (override the snapshot date, for replays).
-- The job exits early with status `skipped` when the newest snapshot in `data/snapshots/index.json` is younger than 13 days. Result: one snapshot every second Monday, anchored to the first run.
+- Workflow `collect.yml` in the private repository: cron every Monday 05:17 UTC plus `workflow_dispatch` with inputs `force` (ignore the 6-day guard) and `date` (override the snapshot date, for replays).
+- The job exits early with status `skipped` when the newest snapshot in `data/snapshots/index.json` is younger than 6 days (`min_snapshot_age_days`). Result: one snapshot every Monday; a forced run on another weekday makes the job skip a Monday that falls within 6 days of it.
 - `concurrency: collector` so two runs never overlap; job timeout 15 minutes.
 
 ### 4.2 Steps of a run
@@ -334,7 +334,7 @@ collector/tests/fixtures/synthetic/   generated offers with invented prices and 
 | public `dashboard/deals.json` | ~150 kB | Best deals |
 | public `models/<slug>.json` | 2–60 kB each | Model page, on demand |
 
-A year of fortnightly runs adds about 15 MB to the private repository and under 5 MB to the public one; nothing is pruned in release 1.1. Files the browser reads are stored uncompressed because GitHub Pages compresses text responses itself; archives stay gzipped.
+A year of weekly runs adds about 30 MB to the private repository and under 10 MB to the public one; nothing is pruned in release 1.1. Files the browser reads are stored uncompressed because GitHub Pages compresses text responses itself; archives stay gzipped.
 
 ### 5.5 Identity and publication rules
 
@@ -471,7 +471,7 @@ Both: column chooser, column sort, sticky header, virtualised rows, `pl-PL` numb
 
 | Component | Contract |
 |---|---|
-| `FreshnessBar` | Snapshot date, next scheduled run, status; shows a warning strip when the newest snapshot is older than 16 days or `suspect` |
+| `FreshnessBar` | Snapshot date, next scheduled run, status; shows a warning strip when the newest snapshot is older than 9 days or `suspect` |
 | `KpiTile` | label, value (auto-compact), delta vs previous run with direction, optional 12-point sparkline |
 | `ModelTile` | model name, count, delta, lowest special price, sparkline, up to three promo chips, link to Model |
 | `TrendChart` | ECharts line; crosshair with a tooltip listing every series at that date; one y-axis; 2 px lines; 8 px end markers; legend when 2+ series |
@@ -688,7 +688,7 @@ The identifier check (first row) also runs over all of the private repository’
 | Area | Requirement |
 |---|---|
 | Performance | Overview interactive in under 2 s on a desktop connection: first load ≤ 350 kB of JavaScript (gzipped) plus `latest.json` and `trends.json`; model files load on demand; a 5,000-row offer table in the private build scrolls at 60 fps through virtualisation; a filter change re-renders in under 100 ms |
-| Reliability | A run is idempotent (re-running a date overwrites that snapshot); every gate of 4.3 has a test; a failed run leaves both repositories untouched and the previous site online; the dashboard shows a warning when data is older than 16 days |
+| Reliability | A run is idempotent (re-running a date overwrites that snapshot); every gate of 4.3 has a test; a failed run leaves both repositories untouched and the previous site online; the dashboard shows a warning when data is older than 9 days |
 | Reproducibility | Every derived file, public and private, can be rebuilt from the redacted `raw/` with `make rebuild`; rule sets are versioned with `valid_from`; the redacted fixture of 13 Oct 2026 reproduces the counts in section 12 |
 | Politeness to the source | At most 10 requests per run, 1 s apart, identifying User-Agent with the public repository URL, no images, no bundle download, immediate stop on 403 or 429, no retries beyond 4.2, never a workaround of a block (other address, other User-Agent); one run per 14 days |
 | Legal | Collection relies on the text-and-data-mining exception for databases (art. 8a ustawy o ochronie baz danych): the feed is copied only to compute trends, and no machine-readable reservation exists (3.6). Only aggregates are published, so no substantial part of the database is made available to the public, and no information of the site is reproduced at offer level, in line with §8.2–8.3 of the audi.pl Regulamin. No identifiers, offer links, phone numbers, brand assets, images or bundle copies are collected. About states that the figures are aggregates, not offers, and that the project is not affiliated with Audi. A reservation found later, a written objection from Volkswagen Group Polska, or a block stops collection until the owner decides (runbook) |
@@ -793,6 +793,10 @@ Decided in rev 38 (13 Oct 2026, by the owner; ADR-0009):
 - Legal basis: the text-and-data-mining exception for databases for collection; no offer-level publication, which keeps within §8.2–8.3 of the audi.pl Regulamin (section 11, Legal). Written consent from Volkswagen Group Polska is not needed for this scope; ask for it before anything is ever published at offer level.
 - User-Agent contact: the public repository URL; no personal e-mail. Automation issues go to the owner through the private repository.
 - Dealer phone numbers: not collected.
+
+Decided in rev 39 (22 Oct 2026, by the owner):
+
+- Cadence: weekly. The job still fires every Monday 05:17 UTC; the guard drops from 13 to 6 days (one snapshot every Monday) and the staleness warning from 16 to 9 days. Backlog item 4 stays open for the extra month-start run only.
 
 Open (defaults apply until decided):
 

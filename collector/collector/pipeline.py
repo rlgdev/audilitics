@@ -39,7 +39,7 @@ def guard_skip(settings: Settings, date: str) -> str | None:
         return None
     newest = max(e["date"] for e in index)
     age = (Date.fromisoformat(date) - Date.fromisoformat(newest)).days
-    return newest if age < int(settings.get("min_snapshot_age_days", 13)) else None
+    return newest if age < int(settings.get("min_snapshot_age_days", 6)) else None
 
 
 def collect_live(settings: Settings, date: str, force: bool = False) -> dict[str, Any]:
@@ -47,7 +47,7 @@ def collect_live(settings: Settings, date: str, force: bool = False) -> dict[str
         newest = guard_skip(settings, date)
         if newest:
             res = _result(date, "skipped", message=f"newest snapshot {newest} is younger than "
-                                                     f"{settings.get('min_snapshot_age_days', 13)} days")
+                                                     f"{settings.get('min_snapshot_age_days', 6)} days")
             _write_run(settings, res, render(res, None, None))
             return res
     rules = load_rules(settings.rules_dir, date)

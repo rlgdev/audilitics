@@ -1,9 +1,9 @@
 Covers: operating the collector of the private repository: commands, issue labels, failed, blocked and suspect runs, schema changes, guard failures, the rules review on the live bundle, the reservation check, replay and rebuild, forced runs, the PUBLIC_REPO_TOKEN, model overrides, going public and the public-history check (spec 3.6, 4, 10, 11, 16.5).
-Last verified against the code: 2026-10-13.
+Last verified against the code: 2026-10-22.
 
 # Runbook
 
-The collector runs as the job `collect.yml` of the private repository `rlgdev/audilitics-private`, every Monday at 05:17 UTC with a 13-day guard, so one snapshot is taken every second Monday (spec 4.1). The job checks out the public repository at `COLLECTOR_REF` (repository variable, default `main`), collects into the private `data/`, runs the publication guard and the identifier check, commits `data/` to the private repository, mirrors `data/public/` onto `data/` of `rlgdev/audilitics` with the `PUBLIC_REPO_TOKEN` and opens or updates issues (spec 10.1). Issues, run reports and job artifacts live in the private repository only. The push to the public repository triggers `deploy-pages.yml`.
+The collector runs as the job `collect.yml` of the private repository `rlgdev/audilitics-private`, every Monday at 05:17 UTC with a 6-day guard, so one snapshot is taken every Monday (spec 4.1). The job checks out the public repository at `COLLECTOR_REF` (repository variable, default `main`), collects into the private `data/`, runs the publication guard and the identifier check, commits `data/` to the private repository, mirrors `data/public/` onto `data/` of `rlgdev/audilitics` with the `PUBLIC_REPO_TOKEN` and opens or updates issues (spec 10.1). Issues, run reports and job artifacts live in the private repository only. The push to the public repository triggers `deploy-pages.yml`.
 
 Locally, clone both repositories side by side (`audilitics/` and `audilitics-private/`) and run every command from the root of the public clone after `make setup`.
 
@@ -208,7 +208,7 @@ The public repository receives the rebuilt tree with the next run that pushes (s
 
 ## Forcing a run
 
-The job skips with status `skipped` when the newest snapshot is younger than 13 days (spec 4.1).
+The job skips with status `skipped` when the newest snapshot is younger than 6 days (spec 4.1).
 
 - In GitHub: `rlgdev/audilitics-private`, Actions, workflow `collect`, Run workflow, set `force` to `true`. Leave `date` empty for today.
 - Locally: `make collect FORCE=1 DATA=../audilitics-private/data` makes a live run from your machine. It counts against the site like any run, and only the job commits and pushes; prefer the workflow.

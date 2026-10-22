@@ -38,7 +38,7 @@ function Shell() {
         </Suspense>
       </main>
       <footer className="foot">
-        Aggregates of offers published on gotowedoodbioru.audi.pl, collected every 14 days. The figures are not offers within the meaning of the Civil Code. Not affiliated with Audi or Volkswagen Group Polska.
+        Aggregates of offers published on gotowedoodbioru.audi.pl, collected every week. The figures are not offers within the meaning of the Civil Code. Not affiliated with Audi or Volkswagen Group Polska.
         {IS_PRIVATE && ' Private build: offer-level data, for local use only.'}
       </footer>
     </div>

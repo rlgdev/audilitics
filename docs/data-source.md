@@ -1,5 +1,5 @@
 Covers: the gotowedoodbioru.audi.pl JSON feed: endpoints, request budget, query parameters, field dictionary, fields discarded at ingestion, slider and badge rules, behaviour, the reservation check and the observed facts of 13 Oct 2026 (spec 3).
-Last verified against the code: 2026-10-13.
+Last verified against the code: 2026-10-22.
 
 # Data source
 
@@ -38,7 +38,7 @@ The feed answers with `Content-Type: text/html` although the body is JSON. The c
 
 Retries of the main pull (spec 4.2 step 3, back-off 10 s, 30 s, 90 s) are not counted again. Requests are spaced `request_spacing_s: 1.0` apart. A request beyond the budget fails the run. HTTP 403 or 429 stops the run at once with no retry. The run report lists every request with a "Budgeted" column.
 
-Every request carries `User-Agent: audilitics/1.1.0 (price trend research; +https://github.com/rlgdev/audilitics)`, built from `user_agent`, the collector version and `public_repo` in `collector/config.yaml`. There is no personal e-mail in it (spec 15.1).
+Every request carries `User-Agent: audilitics/1.1.1 (price trend research; +https://github.com/rlgdev/audilitics)`, built from `user_agent`, the collector version and `public_repo` in `collector/config.yaml`. There is no personal e-mail in it (spec 15.1).
 
 ## Query parameters of `get2.php` (spec 3.2)
 

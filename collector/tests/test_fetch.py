@@ -119,4 +119,4 @@ def test_budget_enforced(settings: Settings) -> None:
 
 
 def test_user_agent_names_the_public_repository(settings: Settings) -> None:
-    assert settings.user_agent == "audilitics/1.1.0 (price trend research; +https://github.com/rlgdev/audilitics)"
+    assert settings.user_agent == "audilitics/1.1.1 (price trend research; +https://github.com/rlgdev/audilitics)"
