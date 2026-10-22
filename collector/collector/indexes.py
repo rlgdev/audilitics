@@ -45,8 +45,8 @@ def load_index(data: Path) -> list[dict[str, Any]]:
     return list(read_json(p)) if p.exists() else []
 
 
-def next_run(date: str, min_age_days: int = 13) -> str:
-    """Next Monday on or after date + 13 days (cron Mondays + 13-day guard, spec 4.1)."""
+def next_run(date: str, min_age_days: int = 6) -> str:
+    """Next Monday on or after date + 6 days (cron Mondays + 6-day guard, spec 4.1)."""
     d = Date.fromisoformat(date) + timedelta(days=min_age_days)
     while d.weekday() != 0:
         d += timedelta(days=1)
@@ -358,7 +358,7 @@ def rebuild(settings: Settings) -> dict[str, Any]:
         total_pub=total_pub, engine_pub=engine_pub, lfl_series=lfl_series, net=net, cfg_drops=cfg_drops_count,
         model_low_series=model_low_series, sliders=sliders, changes_by_date=changes_by_date, hot=hot,
         window=window,
-        next_run=next_run(entries[-1]["date"], int(settings.get("min_snapshot_age_days", 13))) if entries else None)
+        next_run=next_run(entries[-1]["date"], int(settings.get("min_snapshot_age_days", 6))) if entries else None)
 
     return {"directory": directory, "events": events.get(cur_date or "", {}),
             "changes": changes_by_date.get(cur_date or "", {}), "offer_rows": offer_rows, "hot": hot,
