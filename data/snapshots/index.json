@@ -7,5 +7,14 @@
     "configurations": 194,
     "rules_version": "promo:v1/plans:v1/scoring:v1",
     "bundle_hash": "20ab651335fb4daeebc8"
+  },
+  {
+    "date": "2026-10-22",
+    "status": "ok",
+    "offers": 5065,
+    "models": 52,
+    "configurations": 188,
+    "rules_version": "promo:v1/plans:v1/scoring:v1",
+    "bundle_hash": "b1d19b7fc16c6c248374"
   }
 ]
