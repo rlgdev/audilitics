@@ -6,7 +6,7 @@
     "order": 1,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TFSI"
@@ -19,7 +19,7 @@
     "order": 2,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "(none)",
@@ -35,7 +35,7 @@
     "order": 3,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TFSI e"
@@ -48,7 +48,7 @@
     "order": 4,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -61,7 +61,7 @@
     "order": 5,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TFSI",
@@ -75,7 +75,7 @@
     "order": 6,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -88,7 +88,7 @@
     "order": 7,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -104,7 +104,7 @@
     "order": 8,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -117,7 +117,7 @@
     "order": 9,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -133,7 +133,7 @@
     "order": 10,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -146,7 +146,7 @@
     "order": 11,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -162,7 +162,7 @@
     "order": 12,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -175,7 +175,7 @@
     "order": 13,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -189,7 +189,7 @@
     "order": 14,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -205,7 +205,7 @@
     "order": 15,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -218,7 +218,7 @@
     "order": 16,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-tron"
@@ -231,7 +231,7 @@
     "order": 17,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro"
@@ -244,7 +244,7 @@
     "order": 18,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -257,7 +257,7 @@
     "order": 19,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "50 TDI quattro"
@@ -270,7 +270,7 @@
     "order": 20,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -285,7 +285,7 @@
     "order": 21,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -300,7 +300,7 @@
     "order": 22,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -313,7 +313,7 @@
     "order": 23,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -326,7 +326,7 @@
     "order": 24,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -340,7 +340,7 @@
     "order": 25,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -354,7 +354,7 @@
     "order": 26,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -369,7 +369,7 @@
     "order": 27,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -384,7 +384,7 @@
     "order": 28,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -397,7 +397,7 @@
     "order": 29,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -410,7 +410,7 @@
     "order": 30,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-tron"
@@ -423,7 +423,7 @@
     "order": 31,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -437,7 +437,7 @@
     "order": 32,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -464,7 +464,7 @@
     "order": 34,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -478,7 +478,7 @@
     "order": 35,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TFSI quattro"
@@ -491,7 +491,7 @@
     "order": 36,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "TFSI quattro"
@@ -504,7 +504,7 @@
     "order": 37,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -517,7 +517,7 @@
     "order": 38,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -530,7 +530,7 @@
     "order": 39,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -543,7 +543,7 @@
     "order": 40,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -556,7 +556,7 @@
     "order": 41,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -595,7 +595,7 @@
     "order": 44,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -608,7 +608,7 @@
     "order": 45,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -621,7 +621,7 @@
     "order": 46,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -634,7 +634,7 @@
     "order": 47,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -647,7 +647,7 @@
     "order": 48,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -660,7 +660,7 @@
     "order": 49,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -673,7 +673,7 @@
     "order": 50,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -686,7 +686,7 @@
     "order": 51,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -699,7 +699,7 @@
     "order": 52,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -712,7 +712,7 @@
     "order": 53,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -725,7 +725,7 @@
     "order": 54,
     "status": "active",
     "first_seen": "2026-10-22",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -738,7 +738,7 @@
     "order": 55,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "retired_on": null,
     "engine_groups": [
       "e-tron GT quattro"
