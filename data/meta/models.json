@@ -6,7 +6,7 @@
     "order": 1,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TFSI"
@@ -19,7 +19,7 @@
     "order": 2,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "(none)",
@@ -35,7 +35,7 @@
     "order": 3,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TFSI e"
@@ -48,7 +48,7 @@
     "order": 4,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -61,7 +61,7 @@
     "order": 5,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TFSI",
@@ -75,7 +75,7 @@
     "order": 6,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -88,7 +88,7 @@
     "order": 7,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -104,7 +104,7 @@
     "order": 8,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -117,7 +117,7 @@
     "order": 9,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -133,7 +133,7 @@
     "order": 10,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -146,7 +146,7 @@
     "order": 11,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -162,7 +162,7 @@
     "order": 12,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -175,7 +175,7 @@
     "order": 13,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -189,7 +189,7 @@
     "order": 14,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -205,7 +205,7 @@
     "order": 15,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -218,10 +218,11 @@
     "order": 16,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
-      "e-tron"
+      "e-tron",
+      "e-tron quattro"
     ]
   },
   {
@@ -231,7 +232,7 @@
     "order": 17,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro"
@@ -244,7 +245,7 @@
     "order": 18,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -270,7 +271,7 @@
     "order": 20,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -285,7 +286,7 @@
     "order": 21,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI",
@@ -300,7 +301,7 @@
     "order": 22,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -313,7 +314,7 @@
     "order": 23,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid"
@@ -326,7 +327,7 @@
     "order": 24,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -340,7 +341,7 @@
     "order": 25,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -354,7 +355,7 @@
     "order": 26,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -369,7 +370,7 @@
     "order": 27,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -384,7 +385,7 @@
     "order": 28,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -397,7 +398,7 @@
     "order": 29,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-hybrid quattro"
@@ -410,7 +411,7 @@
     "order": 30,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-tron"
@@ -423,7 +424,7 @@
     "order": 31,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-tron",
@@ -437,7 +438,7 @@
     "order": 32,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -449,10 +450,10 @@
     "slug": "q7-tfsi-e",
     "segment": "Q",
     "order": 33,
-    "status": "active",
+    "status": "retired",
     "first_seen": "2026-10-13",
     "last_seen": "2026-10-13",
-    "retired_on": null,
+    "retired_on": "2026-11-16",
     "engine_groups": [
       "TFSI quattro"
     ]
@@ -464,7 +465,7 @@
     "order": 34,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TDI quattro",
@@ -478,7 +479,7 @@
     "order": 35,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TFSI quattro"
@@ -491,20 +492,33 @@
     "order": 36,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "TFSI quattro"
     ]
   },
   {
+    "name": "Audi Q9",
+    "slug": "q9",
+    "segment": "Q",
+    "order": 37,
+    "status": "active",
+    "first_seen": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "retired_on": null,
+    "engine_groups": [
+      "TDI quattro"
+    ]
+  },
+  {
     "name": "Audi RS 3 Limousine",
     "slug": "rs-3-limousine",
     "segment": "S/RS",
-    "order": 37,
+    "order": 38,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -514,10 +528,10 @@
     "name": "Audi RS 3 Sportback",
     "slug": "rs-3-sportback",
     "segment": "S/RS",
-    "order": 38,
+    "order": 39,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -527,10 +541,10 @@
     "name": "Audi RS 5 Avant",
     "slug": "rs-5-avant",
     "segment": "S/RS",
-    "order": 39,
+    "order": 40,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -540,10 +554,10 @@
     "name": "Audi RS 5 Limousine",
     "slug": "rs-5-limousine",
     "segment": "S/RS",
-    "order": 40,
+    "order": 41,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -553,10 +567,10 @@
     "name": "Audi RS Q8",
     "slug": "rs-q8",
     "segment": "S/RS",
-    "order": 41,
+    "order": 42,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele RS"
@@ -566,11 +580,11 @@
     "name": "Audi RS e-tron GT",
     "slug": "rs-e-tron-gt",
     "segment": "S/RS",
-    "order": 42,
-    "status": "active",
+    "order": 43,
+    "status": "retired",
     "first_seen": "2026-10-13",
     "last_seen": "2026-10-13",
-    "retired_on": null,
+    "retired_on": "2026-11-16",
     "engine_groups": [
       "modele RS"
     ]
@@ -579,11 +593,11 @@
     "name": "Audi RS e-tron GT performance",
     "slug": "rs-e-tron-gt-performance",
     "segment": "S/RS",
-    "order": 43,
-    "status": "active",
+    "order": 44,
+    "status": "retired",
     "first_seen": "2026-10-13",
     "last_seen": "2026-10-13",
-    "retired_on": null,
+    "retired_on": "2026-11-16",
     "engine_groups": [
       "modele RS"
     ]
@@ -592,10 +606,10 @@
     "name": "Audi S e-tron GT",
     "slug": "s-e-tron-gt",
     "segment": "e-tron",
-    "order": 44,
+    "order": 45,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -605,10 +619,10 @@
     "name": "Audi S3 Limousine",
     "slug": "s3-limousine",
     "segment": "S/RS",
-    "order": 45,
+    "order": 46,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -618,10 +632,10 @@
     "name": "Audi S3 Sportback",
     "slug": "s3-sportback",
     "segment": "S/RS",
-    "order": 46,
+    "order": 47,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -631,10 +645,10 @@
     "name": "Audi S5 Avant",
     "slug": "s5-avant",
     "segment": "S/RS",
-    "order": 47,
+    "order": 48,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -644,10 +658,10 @@
     "name": "Audi S5 Limousine",
     "slug": "s5-limousine",
     "segment": "S/RS",
-    "order": 48,
+    "order": 49,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -657,10 +671,10 @@
     "name": "Audi S6 Sportback e-tron",
     "slug": "s6-sportback-e-tron",
     "segment": "S/RS",
-    "order": 49,
+    "order": 50,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -670,10 +684,10 @@
     "name": "Audi SQ5",
     "slug": "sq5",
     "segment": "S/RS",
-    "order": 50,
+    "order": 51,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -683,10 +697,10 @@
     "name": "Audi SQ5 Sportback",
     "slug": "sq5-sportback",
     "segment": "S/RS",
-    "order": 51,
+    "order": 52,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -696,7 +710,7 @@
     "name": "Audi SQ6 e-tron",
     "slug": "sq6-e-tron",
     "segment": "S/RS",
-    "order": 52,
+    "order": 53,
     "status": "active",
     "first_seen": "2026-10-13",
     "last_seen": "2026-10-29",
@@ -709,10 +723,10 @@
     "name": "Audi SQ8",
     "slug": "sq8",
     "segment": "S/RS",
-    "order": 53,
+    "order": 54,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -722,10 +736,10 @@
     "name": "Audi S6 Avant e-tron",
     "slug": "s6-avant-e-tron",
     "segment": "S/RS",
-    "order": 54,
+    "order": 55,
     "status": "active",
     "first_seen": "2026-10-22",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "modele S"
@@ -735,10 +749,10 @@
     "name": "Audi e-tron GT quattro",
     "slug": "e-tron-gt-quattro",
     "segment": "e-tron",
-    "order": 55,
+    "order": 56,
     "status": "active",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-16",
     "retired_on": null,
     "engine_groups": [
       "e-tron GT quattro"
