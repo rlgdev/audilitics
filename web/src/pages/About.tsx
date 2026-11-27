@@ -32,7 +32,7 @@ export function About() {
   return (
     <div className="page prose">
       <h1>About this dashboard</h1>
-      <p>Audilitics shows price trends in the “gotowe do odbioru” stock of the Audi Polska website gotowedoodbioru.audi.pl, collected every 14 days. Everything here is an aggregate: model and segment statistics, and configurations (model, engine, model code and model year) with at least {d.min_group} priced offers.</p>
+      <p>Audilitics shows price trends in the “gotowe do odbioru” stock of the Audi Polska website gotowedoodbioru.audi.pl, collected every week. Everything here is an aggregate: model and segment statistics, and configurations (model, engine, model code and model year) with at least {d.min_group} priced offers.</p>
       <p><strong>The figures are aggregates of offers published on the source site on the stated dates. They are not offers within the meaning of the Civil Code.</strong> Ask an Audi dealer for current offers. The project is not affiliated with Audi or Volkswagen Group Polska and links to no offer.</p>
 
       <h2>What is collected and what is not</h2>

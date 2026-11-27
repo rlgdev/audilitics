@@ -1,5 +1,5 @@
 Covers: entities, the offer and the configuration, offer_id and canonical order, the private and public trees under data/ with their JSON shapes, the minimum group size, publication rules, the publication guard, the JSON Schema files and determinism (spec 5, 10.2, 10.5).
-Last verified against the code: 2026-10-13.
+Last verified against the code: 2026-10-22.
 
 # Data model and file layout
 
@@ -264,7 +264,7 @@ The only file the Overview needs (spec 5.3, 7.1).
 | `changes` | `date`, `previous`, `summary`, `models_new`, `models_retired`, `models_returned` of the newest changes file |
 | `directory` | `segments`, `engine_groups`, `plans`, `plan_footnotes`, `leasing_101`, `promos` (`name`, `slot`, `badge_bit`, `footnote`), `scoring` (weights, momentum cap, new-configuration momentum, bonuses, hot thresholds), `min_group`, `not_collected`. No dealers |
 
-`next_run` is the first Monday on or after the newest snapshot date plus 13 days (spec 4.1).
+`next_run` is the first Monday on or after the newest snapshot date plus 6 days (spec 4.1).
 
 ### dashboard/deals.json
 

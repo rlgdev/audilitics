@@ -1,7 +1,7 @@
 # Audilitics
 
 Audilitics is a public dashboard of price trends in the Audi “gotowe do odbioru” stock (new cars ready for pickup)
-listed on gotowedoodbioru.audi.pl. A collector reads the site’s JSON feed every 14 days. The public site shows
+listed on gotowedoodbioru.audi.pl. A collector reads the site’s JSON feed every week. The public site shows
 aggregates only: trends per model, segment and engine group, model statistics, and deal scores per configuration
 (model + engine + model code + model year). Offer-level tables stay in a private repository and are viewed locally.
 
@@ -28,7 +28,7 @@ are reproduced. Every public figure rests on at least 3 offers (spec 5.5).
 | Fix a failed run or a guard failure | [docs/runbook.md](docs/runbook.md): [failed run](docs/runbook.md#failed-run-collector-failure), [guard failure](docs/runbook.md#guard-failure-publication-guard) |
 | Change the score | [rules/scoring.yaml](rules/scoring.yaml) (new rule set), then `make rebuild DATA=../audilitics-private/data` ([analytics](docs/analytics.md#deal-score-spec-63)) |
 | Add a page | `web/src/pages/` (public) or `web/src/pages/private/` (private build only), route in [web/src/app/routes.tsx](web/src/app/routes.tsx), rules in [docs/design-system.md](docs/design-system.md) |
-| Understand what the project must do | [docs/SPEC.md](docs/SPEC.md) (rev 38) |
+| Understand what the project must do | [docs/SPEC.md](docs/SPEC.md) (rev 39) |
 | Understand the feed and its fields | [docs/data-source.md](docs/data-source.md) |
 | Understand the files under `data/` | [docs/data-model.md](docs/data-model.md) and [collector/schemas/](collector/schemas/) |
 | Know why something is built the way it is | [docs/decisions/](docs/decisions/) |
@@ -66,7 +66,7 @@ The Makefile runs on Linux, macOS and Git Bash on Windows. Every target is a thi
 
 ```text
 gotowedoodbioru.audi.pl JSON feed
-  -> collector: job collect.yml in rlgdev/audilitics-private, every second Monday,
+  -> collector: job collect.yml in rlgdev/audilitics-private, every Monday,
      code and rules/*.yaml from rlgdev/audilitics; identifying fields dropped at ingestion
   -> data/ of the private repository: redacted raw feed, snapshots, offer-level files, exports, run reports
   -> data/public/ mirrored onto data/ of rlgdev/audilitics (fine-grained token)
@@ -79,7 +79,7 @@ Two repositories (spec 9, 10):
 |---|---|---|
 | Holds | Code, rules, docs, aggregate `data/` | `data/` (redacted raw feed, snapshots, `private/`, `public/`, exports, reports), `fixtures/2026-10-13/` |
 | Workflows | `deploy-pages.yml`, `ci.yml` | `collect.yml`, `ci.yml` |
-| Writes `data/` | Never by hand: `data/` only receives pushes from the private job | `collect.yml` every 14 days |
+| Writes `data/` | Never by hand: `data/` only receives pushes from the private job | `collect.yml` every Monday |
 | Secrets and variables | None | Secret `PUBLIC_REPO_TOKEN` (fine-grained, Contents read and write on `rlgdev/audilitics` only); variable `COLLECTOR_REF` (default `main`) |
 | Dashboard | Public build on GitHub Pages | Private build, on the owner’s machine only |
 

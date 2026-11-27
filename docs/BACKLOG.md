@@ -23,7 +23,7 @@ The implementation is done. The go-public steps of spec 16.5 are in progress: un
 | 1 | Contact in the User-Agent and who receives automation issues | Decided: public repository URL, no e-mail; issues in the private repository | Spec 4.2, 15.1 |
 | 2 | Repository visibility and site access | Decided: public repository and Pages site with aggregates only; private repository for offers; fresh public history | Spec 10.4, 16.5, ADR-0009 |
 | 3 | Legal check of collecting the feed | Decided: trends only, no identifiers or links, minimum group size 3, publication guard | Spec 11 (Legal), ADR-0009 |
-| 4 | Cadence anchor and an extra run at month start | Open. Default: every second Monday from the first run after M5; manual runs via `workflow_dispatch` | `collect.yml` (private), `min_snapshot_age_days` |
+| 4 | Cadence anchor and an extra run at month start | Cadence decided in spec rev 39: every Monday (6-day guard). Open: the extra month-start run; manual runs via `workflow_dispatch` | `collect.yml` (private), `min_snapshot_age_days` |
 | 5 | UI language | Open. Default: English labels, Polish site terms | `web/src` |
 | 6 | Dealer phone numbers | Decided: not collected | Spec 3.5 |
 | 7 | Spec 12.1 Business Edition badge count (2,617 → 2,847) | Done in spec rev 38 | Spec 12.1, ADR-0006 |

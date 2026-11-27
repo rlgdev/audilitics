@@ -1,5 +1,5 @@
 # Collector configuration (spec 4.5).
-version: 1.1.0
+version: 1.1.1
 base_url: https://gotowedoodbioru.audi.pl
 public_repo: rlgdev/audilitics
 page_size: 20000
@@ -19,7 +19,7 @@ gates:
   suspect_below: 0.80         # count below 80 % of the previous run -> suspect
   warn_above: 1.20            # count above 120 % -> ok with warning
   slider_badge_tolerance: 0.01  # slider vs badge total differs by more than 1 % -> warning + rules-review
-min_snapshot_age_days: 13     # skip guard (spec 4.1)
-stale_after_days: 16          # dashboard warning (spec 7.4)
+min_snapshot_age_days: 6      # skip guard (spec 4.1): one snapshot a week
+stale_after_days: 9           # dashboard warning (spec 7.4)
 empty_runs_to_retire: 3       # model lifecycle (spec 4.6)
 timezone: Europe/Warsaw

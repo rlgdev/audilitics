@@ -28,7 +28,7 @@ export function Overview() {
 
   if (error) return <ErrorState error={error} retry={() => location.reload()} />;
   if (!latest) return <div className="page loading" aria-busy="true"><p className="muted">Loading…</p></div>;
-  if (!latest.run.data_date) return <EmptyState>No run has been collected yet. The collector runs every second Monday.</EmptyState>;
+  if (!latest.run.data_date) return <EmptyState>No run has been collected yet. The collector runs every Monday.</EmptyState>;
 
   const t = trends.data;
   const set: SeriesSet | null = t ? (f.segment ? t.segments[f.segment] : t.totals) : null;

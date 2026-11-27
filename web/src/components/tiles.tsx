@@ -25,7 +25,7 @@ export function FreshnessBar({ latest }: { latest: Latest }) {
           <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1 L13 12 L1 12 Z" fill="var(--warning)" /><rect x="6.3" y="5" width="1.4" height="4" fill="#0b0b0b" /><rect x="6.3" y="10" width="1.4" height="1.2" fill="#0b0b0b" /></svg>
           {suspect
             ? `The newest run (${fmtDate(r.date)}) looks incomplete and is held back; figures show ${fmtDate(r.data_date)}.`
-            : `Data is ${age} days old; the collector should run every 14 days.`}
+            : `Data is ${age} days old; the collector should run every week.`}
         </div>
       )}
     </div>

@@ -1,7 +1,15 @@
 Covers: user-visible changes per release and the rules versions in force (spec 9, 16).
-Last verified against the code: 2026-10-13.
+Last verified against the code: 2026-10-22.
 
 # Changelog
+
+## 1.1.1 — 2026-10-22
+
+Weekly cadence (spec rev 39, spec 4.1).
+
+- One snapshot every Monday instead of every second Monday: `min_snapshot_age_days` 13 → 6. The job's cron is unchanged (Mondays 05:17 UTC); a forced run on another weekday makes the job skip a Monday that falls within 6 days of it.
+- The dashboard warns when the newest snapshot is older than 9 days instead of 16 (`stale_after_days`); its texts say weekly.
+- Rules versions unchanged: promo:v1/plans:v1/scoring:v1.
 
 ## 1.1.0 — 2026-10-13
 

@@ -246,7 +246,7 @@ def write_public(*, settings: Settings, rules: Rules, entries: list[dict[str, An
             "bundle_hash": newest.get("bundle_hash") if newest else None,
             "duration_s": newest.get("duration_s") if newest else None,
             "snapshots_ok": n, "collector_version": __version__,
-            "stale_after_days": int(settings.get("stale_after_days", 16)),
+            "stale_after_days": int(settings.get("stale_after_days", 9)),
         },
         "kpis": {
             "offers": kpi(t["offers"]),
